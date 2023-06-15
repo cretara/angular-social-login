@@ -1,9 +1,16 @@
 <button nz-button nzType="primary">Primary Button</button>
 
-<asl-google-signin-button *ngIf="!user"></asl-google-signin-button>
+<asl-google-signin-button
+  type="standard"
+  size="medium"
+  text="continue_with"
+  *ngIf="!user"
+>
+  Google
+</asl-google-signin-button>
 
 <div *ngIf="user">
-  <img src="{{ user.photoUrl }}">
+  <img src="{{ user.photoUrl }}" alt="photo-url" />
   <div>
     <h4>{{ user.name }}</h4>
     <p>{{ user.email }}</p>
