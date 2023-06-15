@@ -1,7 +1,5 @@
+import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +8,15 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 })
 export class AppComponent {
   title = 'angular-social-login';
+  user:any;
+  loggedIn:any;
+  constructor(private authService: SocialAuthService) { }
+
+  ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+      console.log(this.user)
+    });
+  }
 }
