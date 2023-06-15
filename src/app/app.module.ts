@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [CommonModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, NzButtonModule],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
