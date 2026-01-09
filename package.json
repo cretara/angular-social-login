@@ -13,7 +13,7 @@
     "@abacritt/angularx-social-login": "^2.1.0",
     "@angular/animations": "^16.1.0",
     "@angular/common": "^21.0.1",
-    "@angular/compiler": "^21.0.2",
+    "@angular/compiler": "^21.0.7",
     "@angular/core": "^16.1.0",
     "@angular/forms": "^21.0.1",
     "@angular/platform-browser": "^21.0.1",
